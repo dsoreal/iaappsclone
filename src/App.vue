@@ -1,18 +1,20 @@
 <template>
   <logologin />
-  <navbar /> 
+  <navline />
   <router-view/>
 </template>
 <script>
-import navbar from './components/navbar.vue'
 import logologin from './components/logologin.vue'
+import navline from './components/navline.vue'
 export default {
-  components: { navbar, logologin }
+  components: { logologin, navline }
 }
 </script>
 
 <style>
 #app {
+  margin: 0;
+  padding: 0;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

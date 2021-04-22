@@ -43,7 +43,7 @@ h4 {
 .pagetop {
   margin-right: auto;
   margin-left: auto;
-  padding: 25px 300px 60px 300px;
+  padding: 25px 150px 60px 300px;
   
 }
 .companyname {
@@ -52,6 +52,7 @@ h4 {
 .user {
   float: right;
   padding-top: 10px;
+ 
 }
 .logout{
   color: #337AB7;
