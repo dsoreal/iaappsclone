@@ -21,7 +21,7 @@ export default {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: white;
+  background-color: #F2F2F2;
   overflow-x: hidden;
   border-right: #C0C0C0 1px solid;
   margin-top: 97px;
