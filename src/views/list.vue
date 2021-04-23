@@ -1,9 +1,10 @@
 <template>
+<div class="page">
   <div class="addbar">
     <div class="apphead">
       <h2>Corporate Associate Announcements</h2>
       </div>    
-    <router-link to="/add">
+    <router-link to="/corp_assoc_announcement/add">
       <div class="add apphead">
         Add
       </div>
@@ -30,6 +31,7 @@
       <span class="postdate">Posted</span>
     </div>
   </table>
+</div>
 </template>
 
 <script>
@@ -39,6 +41,9 @@ export default {
 </script>
 
 <style scoped>
+.page {
+  margin-left: 210px;
+}
 .addbar {
   background-color: #C3202F;
   margin-top: 25px;

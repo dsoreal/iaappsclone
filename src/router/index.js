@@ -6,17 +6,17 @@ import AppsHome from '../views/appshome.vue'
 
 const routes = [
   {
-    path: '/list',
+    path: '/corp_assoc_announcement/list',
     name: 'list',
     component: List
   },
   {
-    path: '/details',
+    path: '/corp_assoc_announcement/details',
     name: 'details',
     component: Details
   },
   {
-    path: '/add',
+    path: '/corp_assoc_announcement/add',
     name: 'add',
     component: Add
   },

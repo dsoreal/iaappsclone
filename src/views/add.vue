@@ -1,6 +1,6 @@
 <template>
   <h3>This is the add page</h3>
-  <router-link to="/details">
+  <router-link to="/corp_assoc_announcement/details">
     <div class="savelink">
       Save
     </div>
@@ -19,14 +19,14 @@ a {
     color: white;
 }
     .savelink {
-        background: #5CB85C;
+        background: #337AB7;
         padding: 6px 12px;
         border-radius: 4px;
         margin: 50px ;
         display: inline-block;
     }
     .savelink:hover {
-        background: #449D44;
+        background: #286090;
         cursor: pointer;
     }
 </style>

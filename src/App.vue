@@ -1,13 +1,15 @@
 <template>
   <logologin />
   <navline />
+  <sidenav v-if="$route.name !='appshome'" />
   <router-view/>
 </template>
 <script>
 import logologin from './components/logologin.vue'
 import navline from './components/navline.vue'
+import sidenav from './components/sidenav.vue'
 export default {
-  components: { logologin, navline }
+  components: { logologin, navline, sidenav }
 }
 </script>
 

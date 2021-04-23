@@ -12,7 +12,7 @@
     <h2>Inside Averitt Apps</h2>
 
     <div class="app ">
-    <router-link to="/list">
+    <router-link to="/corp_assoc_announcement/list">
       <span class="material-icons firstrow">
         shopping_cart
       </span>
