@@ -23,20 +23,43 @@
       <input type="text" placeholder="search">
     </div>
   </div>
+  <div class="table">
   <table>
-    <div class="sortbar">
-      <span class="associate">Associate</span>
-      <span class="posttype">Post Type</span>
-      <span class="Item">Item</span>
-      <span class="postdate">Posted</span>
-    </div>
+    <col />
+    <thead>
+      <tr>
+        <th><span class="associate">Associate</span></th>
+        <th><span class="posttype">Post Type</span></th>
+        <th><span class="Item">Item</span></th>
+        <th><span class="postdate">Posted Date</span> </th>     
+    </tr>
+    </thead>
+    <tbody colspan="4">  
+      <tr v-if="error"><td colspan="4">{{ error }}</td></tr>
+      <postList :posts="posts" v-if="posts.length" class="postList" colspan="4" />
+      <tr class="loading" v-else><td colspan="4">Loading Please Wait...</td></tr>
+    </tbody>
   </table>
+  </div>
+  
 </div>
 </template>
 
 <script>
-export default {
+import postList from '../components/postList.vue'
+import getPosts from '../composables/getPosts'
 
+
+export default {
+  components: { postList },
+  setup() {
+    const {posts, error, load} = getPosts()
+
+    load()
+
+   
+    return { posts, error }
+  }
 }
 </script>
 
@@ -58,9 +81,7 @@ export default {
   font-size: 20px;
   font-weight: 300;
   line-height: 1.4;
-
 }
-
 .add {
   position: relative;
   background: #333333;
@@ -104,8 +125,6 @@ a {
   box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
   transition: border-color ease-in-out 0.15s,box-shadow ease-in-out 0.15s;
 }
-
-
 .search input{
   padding: 6px 12px;
   float: right;
@@ -116,15 +135,25 @@ a {
   border-radius: 4px;
   background-color: #fff;
 }
-.sortbar {
-  padding: 13px;
-  background-color: #333333;
-  color: white;
-  text-align: left;
+.table {
   margin-right: 20px;
 }
-.sortbar span {
-  padding-right: 100px;
-}
+table {
+    padding: 10px;
+    width: 100%;
+    height: auto;
+    border-collapse: collapse;
+    text-align: center;
 
+}
+thead {
+  background-color: #333333;
+  color: white;
+  width: 100%;
+  padding: 10px 0;
+}
+th {
+  width: 25%;
+  padding: 10px 0;
+}
 </style>

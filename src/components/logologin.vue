@@ -5,7 +5,7 @@
         <router-link to="/"><img src="../assets/logo.png" alt=""></router-link>
 
       </span>
-      <span class="appname"></span>
+      <span class="appname" v-if="$route.path != '/'">Corporate Associate Announcements</span>
       <span class="user">Hi, David Sorrell | <a href="#" class="logout">Logout</a></span>
   </div>
 </template>
@@ -30,7 +30,6 @@ h4 {
   
 }
 .logo {
-  padding-right: 10px;
   text-align: left;
   font-size: 16px;
   float: left;
@@ -39,6 +38,10 @@ h4 {
 }
 .appname {
   color: #C3202F;
+  text-align: left;
+  float: left;
+  padding-top: 15px;
+  font-size: 15px;
 }
 .pagetop {
   margin-right: auto;
