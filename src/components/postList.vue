@@ -1,6 +1,7 @@
 <template> 
-    <tr v-for="post in posts" :key="post.id" class="trueList">
-        <singlePost :post="post"  />
+    <tr v-for="post in posts" :key="post.id" class="trueList"
+    @click="detailsRoute(route)">
+        <singlePost :post="post"  />  
     </tr>
 </template>
 
@@ -13,6 +14,11 @@ export default {
     ],
     components: {
         singlePost
+    },
+    methods: {
+        detailsRoute(route) {
+            this.$router.push('/corp_assoc_announcement/details/')
+        }
     }
 }
 </script>
