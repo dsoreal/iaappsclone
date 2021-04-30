@@ -1,6 +1,5 @@
 <template> 
-    <tr v-for="post in posts" :key="post.id" class="trueList"
-    @click="detailsRoute(route)">
+    <tr v-for="post in posts" :key="post.id" class="trueList" @click="detailsRoute(post.id)">
         <singlePost :post="post"  />  
     </tr>
 </template>
@@ -17,7 +16,7 @@ export default {
     },
     methods: {
         detailsRoute(route) {
-            this.$router.push('/corp_assoc_announcement/details/')
+            this.$router.push('/corp_assoc_announcement/details/' + route)
         }
     }
 }

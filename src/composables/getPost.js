@@ -13,6 +13,7 @@ const getPost = (id) => {
             })
             //after delay
             let data = await fetch('http://localhost:3000/posts/' + id)
+            console.log(data)
             if (!data.ok) {
                 throw Error('Post does not Exist')
             }

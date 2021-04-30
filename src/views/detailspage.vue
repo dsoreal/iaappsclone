@@ -1,5 +1,6 @@
 <template>
-<div class="page">
+    <div class="page" v-if="error">{{error}}</div>
+<div v-if="post" class="page">
   <div class="addbar">
     <div class="apphead">
         <h2>Corporate Associate Announcements</h2>
@@ -16,18 +17,18 @@
             <div class="itemfields">
             <label for="item" class="label">Item</label>
             <br>
-            <span>TV</span>
+            <span>{{post.item}}</span>
             </div>
             <div class="posttype">           
             <label for="" class="type label">Post Type</label>
             <br>
-            <span>For Sale</span>
+            <span>{{post.type}}</span>
             </div>
             <br>
             <div class="description">
               <label for="description" class="label">Description</label>
               <br>
-              <span>description will go here</span>
+              <span>{{post.description}}</span>
             </div>
           </div>
           <div class="photos">
@@ -41,19 +42,21 @@
 </template>
 
 <script>
+import getPost from '../composables/getPost.js'
+import { onMounted, onUpdated, onUnmounted } from 'vue'
 export default {
   props: ['id'],
-    data() {
-        return {
-            item: '',
-            description: '',
-            uri: 'http://localhost:3000/posts/' + this.id
-        }
-    }
+  setup(props){
+    const {post, error, load} = getPost(props.id)
+
+    load()
+
+    return{post, error}
+  }
 }
 </script>
 
-<style scoped>
+<style>
 .page {
   margin-left: 210px;
 }

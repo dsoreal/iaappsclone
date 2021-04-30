@@ -1,6 +1,8 @@
 <template>
   <div class="sidenav">
+  <router-link :to="'/corp_assoc_announcement/list'">
   <div class="announcelink links">Announcements</div>
+  </router-link>
   <div class="adminlink links">Admin</div>
   <div class="accesscontrollink links">Access Control</div>
 </div>
@@ -29,10 +31,9 @@ export default {
   text-align: left;
  
 }
-
-
-.sidenav a:hover {
-  text-decoration: underline;
+a {
+  text-decoration: none;
+  color: black;
 }
 
 @media screen and (max-height: 450px) {

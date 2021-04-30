@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import List from '../views/list.vue'
-import Details from '../views/details.vue'
+import DetailsPage from '../views/detailspage.vue'
 import Add from '../views/add.vue'
 import AppsHome from '../views/appshome.vue'
 
@@ -13,7 +13,7 @@ const routes = [
   {
     path: '/corp_assoc_announcement/details/:id',
     name: 'details',
-    component: Details
+    component: DetailsPage
   },
   {
     path: '/corp_assoc_announcement/add',
