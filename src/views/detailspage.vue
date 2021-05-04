@@ -42,7 +42,16 @@
           <div class="photos">
             <div class="sectionheader">
               <h2>Photos</h2>
-              </div>                     
+              </div>
+            <div class="sectionheader">
+              <h2>Activity Log</h2>
+              </div> 
+              <div class="fields">
+                <div class="added">
+                  <label for="">Created:</label>
+                </div>
+                <span>By {{ post. associate }} on {{ post.date }}</span>
+              </div>                  
           </div>
         </div>    
     </div>
