@@ -13,7 +13,8 @@ const routes = [
   {
     path: '/corp_assoc_announcement/details/:id',
     name: 'details',
-    component: DetailsPage
+    component: DetailsPage,
+    props: true
   },
   {
     path: '/corp_assoc_announcement/add',

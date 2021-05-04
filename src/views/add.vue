@@ -6,15 +6,14 @@
       </div>    
       
     </div>
-    <div class="filterbar">
-      <router-link to="/corp_assoc_announcement/details">
+    <form @submit.prevent="handleSubmit">
+        <div class="filterbar"> 
         <div class="savelink">
-          Save
+          <button>Save</button>
         </div>
-      </router-link>
     </div>
-    <div class="form">
-      <form action="#">
+        <div class="form" >
+          
         <div class="postinfo">
           <div class="sectionheader">
             <h2>Post Information</h2>
@@ -23,21 +22,21 @@
             <div class="itemfields">
             <label for="item" class="label">Item</label>
             <br>
-            <input type="text" class="itemfield">
+            <input type="text" v-model="item" class="itemfield">
             </div>
             <div class="posttype">           
             <label for="" class="type label">Post Type</label>
             <br>
-            <select name="postType" id="type" class="itemfield">
-              <option value="forSale">For Sale</option>
-              <option value="wanted">Wanted</option>
+            <select name="postType" id="type" class="itemfield" v-model="type">
+              <option value="For Sale">For Sale</option>
+              <option value="Wanted">Wanted</option>
             </select>
             </div>
             <br>
             <div class="description">
               <label for="description" class="label">Description</label>
               <br>
-              <textarea class="itemfield descfield"></textarea>
+              <textarea v-model="description" class="itemfield descfield" ></textarea>
             </div>
           </div>
           <div class="photos">
@@ -50,16 +49,46 @@
                 Upload Photos
                 <p class="file-name"></p>
               </label>
+              </div>
             </div>
           </div>
         </div>
       </form>
     </div>
-  </div>
 </template>
 
 <script>
+import moment from 'moment'
+
+
 export default {
+  data() {
+    return {
+      item: '',
+      type: '',
+      description: '',
+      associate: 'David Sorrell',
+      date: moment(new Date()).format('MM/DD/YYYY')
+    }
+  },
+  methods: {
+    handleSubmit() {
+      let project = {
+        item: this.item,
+        type: this.type,
+        description: this.description,
+        associate: this.associate,
+        date: this.date
+      }
+      fetch('http://localhost:3000/posts', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json'},
+        body: JSON.stringify(project)
+      }).then(() => {
+        this.$router.push('/corp_assoc_announcement/list')
+      }).catch((err) => console.log(err))
+    }
+  }
 }
 </script>
 
@@ -83,12 +112,7 @@ export default {
   line-height: 1.4;
 
 }
-a {
-    text-decoration: none;
-    color: white;
-    font-weight: 300;
-}
-.savelink {
+button {
   background: #337AB7;
   padding: 5px 10px;
   border-radius: 4px;
@@ -96,6 +120,11 @@ a {
   cursor: pointer;
   margin-top: 15px;
   float: right;
+  color: white;
+  font-weight: 300;
+  outline-style: none;
+  border-style: none;
+  font-size: 16px;
 }
 .savelink:hover {
   background: #286090;
@@ -104,7 +133,6 @@ a {
 .filterbar {
   background-color: #EEEEEE;
   display: block;
-  margin-right: 20px;
   padding: 0px 20px 55px 10px;
   text-align: left;
   font-weight: bold;

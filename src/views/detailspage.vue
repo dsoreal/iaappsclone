@@ -1,6 +1,14 @@
 <template>
-    <div class="page" v-if="error">{{error}}</div>
-<div v-if="post" class="page">
+    <div class="post" v-if="error">
+      <div class="addbar">
+      <div class="apphead">
+        <h2>Corporate Associate Announcements</h2>
+        </div>
+      </div>         
+    <div class="filterbar">
+    </div>
+      {{error}}</div>
+<div v-if="post" class="post">
   <div class="addbar">
     <div class="apphead">
         <h2>Corporate Associate Announcements</h2>
@@ -43,7 +51,6 @@
 
 <script>
 import getPost from '../composables/getPost.js'
-import { onMounted, onUpdated, onUnmounted } from 'vue'
 export default {
   props: ['id'],
   setup(props){
@@ -57,7 +64,7 @@ export default {
 </script>
 
 <style>
-.page {
+.post {
   margin-left: 210px;
 }
 .addbar {
