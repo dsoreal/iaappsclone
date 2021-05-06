@@ -6,7 +6,8 @@
       "item": "Shirtssss",
       "type": "For Sale",
       "description": "lorem ipsum dgoe fjdks dlfkdf eefdjdjfd fkljksdf",
-      "date": "05/06/2021"
+      "date": "05/06/2021",
+      "modifiedDate": "05/07/2021"
     },
     {
       "id": 2,
@@ -20,9 +21,10 @@
       "id": 3,
       "associate": "David Sorrell",
       "item": "Watermelonssssssssss",
-      "type": "Wanted",
-      "description": "lorem ipsum dgoe fjdks dlfkdf eefdjdjfd fkljksdf",
-      "date": "05/06/2021"
+      "type": "For Sale",
+      "description": "lorem ipsum dgoe fjdks dlfkdf eefdjdjfd fgfdshdgfdgfdsdfgdgfdgsfdgsd",
+      "date": "04/06/2021",
+      "modifiedDate": "05/06/2021"
     },
     {
       "id": 4,
@@ -51,10 +53,11 @@
     {
       "item": "another test",
       "type": "Wanted",
-      "description": "test",
+      "description": "test222",
       "associate": "David Sorrell",
-      "date": "05/06/2021",
-      "id": 7
+      "date": "04/08/2021",
+      "id": 7,
+      "modifiedDate": "05/06/2021"
     }
   ]
 }

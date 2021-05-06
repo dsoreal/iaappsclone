@@ -86,7 +86,7 @@ export default {
         headers: { 'Content-Type': 'application/json'},
         body: JSON.stringify(project)
       }).then(() => {
-        this.$router.push('/corp_assoc_announcement/list')
+        this.$router.push('/corp_assoc_announcement/list/')
       }).catch((err) => console.log(err))
     }
   }

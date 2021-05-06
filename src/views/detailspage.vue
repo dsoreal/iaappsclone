@@ -53,9 +53,15 @@
               </div> 
               <div class="fields">
                 <div class="added">
-                  <label for="">Created:</label>
+                  <label for="">Created:</label> 
+                  <br>              
+                <span>By {{ post.associate }} on {{ post.date }}</span>
                 </div>
-                <span>By {{ post. associate }} on {{ post.date }}</span>
+                <div class="edited" v-if="post.modifiedDate">
+                  <label for="">Modified:</label>
+                  <br>
+                  <span>By {{ post.associate }} on {{ post.modifiedDate }}</span>
+                </div>
               </div>                  
           </div>
         </div>    
@@ -160,5 +166,9 @@ label{
 }
 span {
   padding-left: 3px;
+}
+.added {
+  float: left;
+  width: 45%
 }
 </style>
