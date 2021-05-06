@@ -29,7 +29,7 @@
     <thead>
       <tr>
         <th><span class="associate">Associate</span></th>
-        <th><span class="posttype">Post Type</span></th>
+        <th><span class="postType">Post Type</span></th>
         <th><span class="Item">Item</span></th>
         <th><span class="postdate">Posted Date</span> </th>     
     </tr>

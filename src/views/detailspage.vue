@@ -15,6 +15,11 @@
       </div>         
     </div>
     <div class="filterbar">
+      <router-link :to="{name: 'edit', params: { id: post.id }}">
+      <div class="edit apphead">
+        Edit
+      </div>
+    </router-link>
     </div>
     <div class="details">     
         <div class="postinfo">
@@ -61,7 +66,7 @@
 <script>
 import getPost from '../composables/getPost.js'
 export default {
-  props: ['id'],
+  props: ['id', 'post'],
   setup(props){
     const {post, error, load} = getPost(props.id)
 
@@ -75,6 +80,19 @@ export default {
 <style>
 .post {
   margin-left: 210px;
+}
+.edit {
+  position: relative;
+  background-color: #333333;
+  padding: 5px 10px;
+  border-radius: 4px;
+  display: inline-block;
+  cursor: pointer;
+  margin-top: 15px;
+  float: right;
+  color: white;
+  font-weight: 300;
+  
 }
 .addbar {
   background-color: #C3202F;

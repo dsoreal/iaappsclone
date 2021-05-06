@@ -59,38 +59,41 @@
 
 <script>
 import moment from 'moment'
+import getPost from '../composables/getPost.js'
 
 
 export default {
-  props: ['id'],
+    props: ['id'],
   data() {
     return {
       item: '',
       type: '',
       description: '',
       associate: 'David Sorrell',
-      date: moment(new Date()).format('MM/DD/YYYY')
+      date: moment(new Date()).format('MM/DD/YYYY'),
+      uri: 'http://localhost:3000/posts/' + this.id
     }
   },
+  mounted() {
+      fetch(this.uri).then(res => res.json()).then(data => {
+          this.item = data.item
+          this.type = data.type
+          this.description = data.description
+      })
+  },
   methods: {
-    handleSubmit() {
-      let project = {
-        item: this.item,
-        type: this.type,
-        description: this.description,
-        associate: this.associate,
-        date: this.date
+      handleSubmit() {
+          fetch(this.uri, {
+              method: 'PATCH',
+              headers: {'Content-Type':'application/json'},
+              body: JSON.stringify({item: this.item, type: this.type, description: this.description, associate: this.associate})
+          }).then(() => {
+              this.$router.push('/corp_assoc_announcement/details/' + this.id)
+          }).catch(err => console.log(err))
       }
-      fetch('http://localhost:3000/posts', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json'},
-        body: JSON.stringify(project)
-      }).then(() => {
-        this.$router.push('/corp_assoc_announcement/list')
-      }).catch((err) => console.log(err))
-    }
   }
 }
+
 </script>
 
 <style scoped>

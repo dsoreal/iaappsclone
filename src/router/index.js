@@ -3,6 +3,7 @@ import List from '../views/list.vue'
 import DetailsPage from '../views/detailspage.vue'
 import Add from '../views/add.vue'
 import AppsHome from '../views/appshome.vue'
+import Edit from '../views/edit.vue'
 
 const routes = [
   {
@@ -25,7 +26,14 @@ const routes = [
     path: '/',
     name: 'appshome',
     component: AppsHome
+  },
+  {
+    path: '/corp_assoc_announcement/:id/edit',
+    name: 'edit',
+    component: Edit,
+    props: true
   }
+
 ]
 
 const router = createRouter({
