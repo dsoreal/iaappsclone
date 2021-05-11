@@ -1,12 +1,16 @@
 <template>
   <div class="pagetop">
+    <div class="logoApp">
       <span class="logo">
         
         <router-link to="/"><img src="../assets/logo.png" alt=""></router-link>
 
       </span>
       <span class="appname" v-if="$route.path != '/'">Corporate Associate Announcements</span>
+      </div>
+      <div class="logoutIn">
       <span class="user">Hi, David Sorrell | <a href="#" class="logout">Logout</a></span>
+      </div>
   </div>
 </template>
 
@@ -20,49 +24,33 @@ export default {
 </script>
 
 <style scoped>
-div {
-  display: block;
+.pagetop {
+  padding: 10px 0;
+  margin-right: 20px;
+  display:inline-block;
+  width: 75%;
+  
 }
 h4 {
   font-family: "Montserrat",Arial,sans-serif;
   font-weight: 400;
-  
-  
-}
-.logo {
-  text-align: left;
-  font-size: 16px;
-  float: left;
-  
-  
 }
 .appname {
   color: #C3202F;
-  text-align: left;
-  float: left;
-  padding-top: 15px;
-  font-size: 15px;
 }
-.pagetop {
-  margin-right: auto;
-  margin-left: auto;
-  padding: 25px 150px 60px 300px;
-  
+.logoApp {
+text-align: left;
+width: 75%;
+float: left;
+
 }
-.companyname {
-  font-size: 30px;
-}
-.user {
+.logoutIn{
   float: right;
-  padding-top: 10px;
- 
+  text-align: right;
+  margin-right: 20px;
+  width: 20%;
+  padding-top: 15px;
 }
-.logout{
-  color: #337AB7;
-  text-decoration: none;
-}
-.logout:hover {
-  text-decoration: underline;
-}
+
 
 </style>

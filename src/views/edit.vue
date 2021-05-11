@@ -86,7 +86,7 @@ export default {
           fetch(this.uri, {
               method: 'PATCH',
               headers: {'Content-Type':'application/json'},
-              body: JSON.stringify({item: this.item, type: this.type, description: this.description, associate: this.associate, modifiedDate: this.modifiedDate})
+              body: JSON.stringify({item: this.item, type: this.type, description: this.description, editAssociate: this.associate, modifiedDate: this.modifiedDate})
           }).then(() => {
               this.$router.push('/corp_assoc_announcement/details/' + this.id)
           }).catch(err => console.log(err))

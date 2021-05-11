@@ -11,11 +11,12 @@
     },
     {
       "id": 2,
-      "associate": "McKinzie Rose",
-      "item": "TV",
+      "associate": "David Sorrell",
+      "item": "TV 50in",
       "type": "Wanted",
       "description": "lorem ipsum dgoe fjdks dlfkdf eefdjdjfd fkljksdf",
-      "date": "04/28/2021"
+      "date": "04/28/2021",
+      "modifiedDate": "05/07/2021"
     },
     {
       "id": 3,
@@ -28,11 +29,13 @@
     },
     {
       "id": 4,
-      "associate": "David Sorrell",
-      "item": "Car",
+      "associate": "Mckinzie Rose",
+      "item": "Carssssssss",
       "type": "For Sale",
       "description": "I want the cars all of them",
-      "date": "05/06/2021"
+      "date": "05/06/2021",
+      "editAssociate": "David Sorrell",
+      "modifiedDate": "05/07/2021"
     },
     {
       "item": "test",
@@ -45,19 +48,28 @@
     {
       "item": "test",
       "type": "For Sale",
-      "description": "test",
+      "description": "test123",
       "associate": "David Sorrell",
       "date": "05/06/2021",
-      "id": 6
+      "id": 6,
+      "modifiedDate": "05/07/2021"
     },
     {
       "item": "another test",
-      "type": "Wanted",
+      "type": "For Sale",
       "description": "test222",
       "associate": "David Sorrell",
       "date": "04/08/2021",
       "id": 7,
-      "modifiedDate": "05/06/2021"
+      "modifiedDate": "05/07/2021"
+    },
+    {
+      "item": "test for details route",
+      "type": "Wanted",
+      "description": "This should route to details page on add save",
+      "associate": "David Sorrell",
+      "date": "05/11/2021",
+      "id": 8
     }
   ]
 }
