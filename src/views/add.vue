@@ -73,7 +73,7 @@ export default {
     }
   },
   methods: {
-    handleSubmit() {
+handleSubmit() {
       let project = {
         item: this.item,
         type: this.type,
@@ -86,7 +86,9 @@ export default {
         headers: { 'Content-Type': 'application/json'},
         body: JSON.stringify(project)
       }).then(() => {
-        this.$router.push('/corp_assoc_announcement/list/')
+        fetch('http://localhost:3000/posts')
+        .then(response => response.json())
+        .then(data => this.$router.push('/corp_assoc_announcement/details/' + data.length))      
       }).catch((err) => console.log(err))
     }
   }
