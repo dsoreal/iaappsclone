@@ -21,9 +21,27 @@
 
 <script>
 export default {
+    data() {
+        return {
+            username: '',
+            password: '',
+            userList: [],
+            userPass: []
+        }
+    },
     methods: {
         handleLogin() {
-            this.$router.push('/')
+            let i = 0
+        fetch('http://localhost:3000/users')
+        .then(response => response.json())
+        .then(data => {
+            for(i = 0; i < data.length; i++) {
+                this.userList.push(data[i].username)
+                this.userPass.push(data[i].password)
+                }
+                console.log(this.userList)
+                console.log(this.userPass)                 
+        })   
         }
     }
 }
@@ -78,8 +96,7 @@ input.username:focus, input.password:focus{
     background-color: #337AB7;
     border-style: none;
     border-radius: 4px;
-    padding: 12px 36px;
-    
+    padding: 12px 30px;
     font-weight: 400;
     cursor: pointer;
     width: 10%;

@@ -71,5 +71,22 @@
       "date": "05/11/2021",
       "id": 8
     }
+  ],
+
+
+
+  "users": [
+    {
+      "username": "dsorrell",
+      "name": "David Sorrell",
+      "password": "Test123",
+      "id": 1
+    },
+    {
+      "username": "mrose",
+      "name": "McKinzie Rose",
+      "password": "testtest",
+      "id": 2
+    }
   ]
 }
