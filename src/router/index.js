@@ -4,6 +4,7 @@ import DetailsPage from '../views/detailspage.vue'
 import Add from '../views/add.vue'
 import AppsHome from '../views/appshome.vue'
 import Edit from '../views/edit.vue'
+import Login from '../views/loginpage.vue'
 
 const routes = [
   {
@@ -32,6 +33,11 @@ const routes = [
     name: 'edit',
     component: Edit,
     props: true
+  },
+  {
+  path: '/login',
+  name: 'login',
+  component: Login
   }
 
 ]

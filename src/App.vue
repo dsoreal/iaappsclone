@@ -1,7 +1,7 @@
 <template>
   <logologin />
   <navline />
-  <sidenav v-if="$route.name !='appshome'" />
+  <sidenav v-if="$route.name !='appshome' && $route.name !='login'" />
   <router-view/>
 </template>
 <script>

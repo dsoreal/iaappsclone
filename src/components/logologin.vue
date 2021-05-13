@@ -6,10 +6,10 @@
         <router-link to="/"><img src="../assets/logo.png" alt=""></router-link>
 
       </span>
-      <span class="appname" v-if="$route.path != '/'">Corporate Associate Announcements</span>
+      <span class="appname" v-if="$route.path != '/' && $route.path !='/login'">Corporate Associate Announcements</span>
       </div>
       <div class="logoutIn">
-      <span class="user">Hi, David Sorrell | <a href="#" class="logout">Logout</a></span>
+      <span class="user" v-if="$route.path !='/login'">Hi, David Sorrell | <a href="#" class="logout" @click="logout">Logout</a></span>
       </div>
   </div>
 </template>
@@ -19,6 +19,11 @@ import appsLogo from '../assets/logo.png'
 export default {
   data() {
     logo: appsLogo
+  },
+  methods: {
+    logout() {
+      this.$router.push('/login')
+    }
   }
 }
 </script>
