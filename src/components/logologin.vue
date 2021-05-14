@@ -9,7 +9,7 @@
       <span class="appname" v-if="$route.path != '/' && $route.path !='/login'">Corporate Associate Announcements</span>
       </div>
       <div class="logoutIn">
-      <span class="user" v-if="$route.path !='/login'">Hi, David Sorrell | <a href="#" class="logout" @click="logout">Logout</a></span>
+      <span class="user" v-if="$route.path !='/login'" id="user">Hi, {{ $store.state.displayName }} | <a href="#" class="logout" @click="logout">Logout</a></span>
       </div>
   </div>
 </template>
