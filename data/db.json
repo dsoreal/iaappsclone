@@ -57,24 +57,62 @@
     {
       "item": "another test",
       "type": "For Sale",
-      "description": "test222",
+      "description": "test2222222",
       "associate": "David Sorrell",
       "date": "04/08/2021",
       "id": 7,
-      "modifiedDate": "05/07/2021"
+      "modifiedDate": "05/20/2021",
+      "editAssociate": "McKinzie Rose"
     },
     {
       "item": "test for details route",
       "type": "Wanted",
-      "description": "This should route to details page on add save",
+      "description": "This should route to details page on add save 1",
       "associate": "David Sorrell",
       "date": "05/11/2021",
-      "id": 8
+      "id": 8,
+      "editAssociate": "David Sorrell",
+      "modifiedDate": "05/20/2021"
+    },
+    {
+      "item": "test",
+      "type": "For Sale",
+      "description": "test",
+      "associate": "David Sorrell",
+      "date": "05/20/2021",
+      "id": 9
+    },
+    {
+      "item": "test for edit",
+      "type": "Wanted",
+      "description": "I made an edit as mrose",
+      "associate": "David Sorrell",
+      "date": "05/20/2021",
+      "id": 10,
+      "editAssociate": "McKinzie Rose",
+      "modifiedDate": "05/20/2021"
+    },
+    {
+      "item": "test",
+      "type": "Wanted",
+      "description": "test",
+      "associate": "McKinzie Rose",
+      "date": "05/20/2021",
+      "id": 11,
+      "editAssociate": "David Sorrell",
+      "modifiedDate": "05/20/2021"
+    },
+    {
+      "item": "test 123 123",
+      "type": "For Sale",
+      "description": "test test test test",
+      "associate": "David Sorrell",
+      "date": "05/20/2021",
+      "id": 12,
+      "editAssociate": "McKinzie Rose",
+      "modifiedDate": "05/20/2021"
     }
   ],
-
-
-
   "users": [
     {
       "username": "dsorrell",
