@@ -8,6 +8,7 @@
 import logologin from './components/logologin.vue'
 import navline from './components/navline.vue'
 import sidenav from './components/sidenav.vue'
+
 export default {
   components: { logologin, navline, sidenav }
 }
