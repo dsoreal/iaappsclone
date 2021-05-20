@@ -68,7 +68,7 @@ export default {
       item: '',
       type: '',
       description: '',
-      associate: 'David Sorrell',
+      associate: '',
       date: moment(new Date()).format('MM/DD/YYYY')
     }
   },
@@ -78,7 +78,7 @@ handleSubmit() {
         item: this.item,
         type: this.type,
         description: this.description,
-        associate: this.associate,
+        associate: this.$store.state.displayName,
         date: this.date
       }
       fetch('http://localhost:3000/posts', {

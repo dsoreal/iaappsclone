@@ -60,7 +60,7 @@
                 <div class="edited" v-if="post.modifiedDate">
                   <label for="">Modified:</label>
                   <br>
-                  <span>By {{ post.associate }} on {{ post.modifiedDate }}</span>
+                  <span>By {{ post.editAssociate }} on {{ post.modifiedDate }}</span>
                 </div>
               </div>                  
           </div>

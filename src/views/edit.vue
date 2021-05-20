@@ -69,7 +69,7 @@ export default {
       item: '',
       type: '',
       description: '',
-      associate: 'David Sorrell',
+      associate: '',
       modifiedDate: moment(new Date()).format('MM/DD/YYYY'),
       uri: 'http://localhost:3000/posts/' + this.id
     }
@@ -86,7 +86,7 @@ export default {
           fetch(this.uri, {
               method: 'PATCH',
               headers: {'Content-Type':'application/json'},
-              body: JSON.stringify({item: this.item, type: this.type, description: this.description, editAssociate: this.associate, modifiedDate: this.modifiedDate})
+              body: JSON.stringify({item: this.item, type: this.type, description: this.description, editAssociate: this.$store.state.displayName, modifiedDate: this.modifiedDate})
           }).then(() => {
               this.$router.push('/corp_assoc_announcement/details/' + this.id)
           }).catch(err => console.log(err))
