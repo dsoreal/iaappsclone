@@ -50,7 +50,7 @@ export default {
                 if(this.userList.indexOf(this.username) == this.userPass.indexOf(this.password)) {
                     this.$store.state.displayName = this.nameList[this.userList.indexOf(this.username)]
                     console.log(this.$store.state.displayName)
-                    //this.$router.push('/')
+                    this.$router.push('/')
                     
                 
                 } else {
